@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sockets</title>
+</head>
+<body>
+<script type="text/javascript" src="/static/socketio.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+    var socket = io.connect('http://' + document.domain + ':' + location.port);
+    /*socket.on('connect', function() {
+        socket.emit('my event', {data: 'I\'m connected!'});
+    });*/
+    function send_msg()
+    {
+    	socket.emit('my event', {data: document.getElementById('usertext').value});
+    }
+
+    socket.on('message', function(data) {
+    		document.getElementById('a').innerHTML = data;
+    })
+</script>
+<textarea id='usertext' name='usertext'></textarea>
+<button onclick='send_msg()'>Click!</button>
+<div id='a'></div>
+</body>
+</html>

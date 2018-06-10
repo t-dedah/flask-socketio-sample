@@ -1,0 +1,11 @@
+div#chat {
+  height: 500px;
+  overflow-y: scroll;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #CCC;
+}
+
+.row {
+  border-bottom: 1px solid #CCC;
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ session.get('name') }}'s chat</title>
+  <link href="/static/style.css" rel="stylesheet"></link>
+  <script type='text/javascript' src='/static/socketio.min.js'></script>
+  <script type='text/javascript' src='/static/chatroom.js'></script>
+  <script type='text/javascript' src='/static/jquery.min.js'></script>
+</head>
+<body>
+  <div id="chat"></div><br>
+  <input type="text" id="umsg" size="80" placeholder="Enter your message here"><br>
+  <button onclick='sendmsg()'>Send</button></br>
+  <button onclick="leave_room()">Leave this room</button>
+</body>
+</html>
